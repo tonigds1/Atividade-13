@@ -43,3 +43,9 @@ button {
     margin-top: 20px;
     font-weight: bold;
 }
+
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
