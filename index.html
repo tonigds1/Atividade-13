@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Contas Bancárias</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bem-vindo ao sistema de contas bancárias!</h1>
+
+    <h2>Criar Conta</h2>
+    <form id="formConta">
+        <div class="form-group">
+            <label for="agencia">Agência:</label>
+            <input type="text" id="agencia" required>
+        </div>
+
+        <div class="form-group">
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tipoConta">Tipo de Conta:</label>
+            <select id="tipoConta">
+                <option value="ContaBancaria">Conta Bancária</option>
+                <option value="ContaCorrente">Conta Corrente</option>
+                <option value="ContaPoupanca">Conta Poupança</option>
+                <option value="ContaUniversitaria">Conta Universitária</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cartaoCredito">Cartão de Crédito (Apenas para Conta Corrente):</label>
+            <input type="text" id="cartaoCredito">
+        </div>
+
+        <div class="form-group">
+            <input type="button" value="Criar" onclick="criarConta()">
+        </div>
+    </form>
+
+    <h2>Operações</h2>
+    <form id="formOperacao">
+        <div class="form-group">
+            <label for="operacao">Operação:</label>
+            <select id="operacao">
+                <option value="sacar">Sacar</option>
+                <option value="depositar">Depositar</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" min="0">
+        </div>
+
+        <div class="form-group">
+            <input type="button" value="Executar" onclick="executarOperacao()">
+        </div>
+    </form>
+
+    <div id="mensagem"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
